@@ -81,6 +81,13 @@ body > div.troll {
 body > div.troll > h2 {
 	position: relative;
 }
+body > div.troll > img {
+	display: block;
+	height: 90%;
+	margin: 0px 26px;
+	image-rendering: -webkit-optimize-contrast;
+	margin-top: 22px;
+}
 body > div.troll > a {
 	position: relative;
 	display: block;
