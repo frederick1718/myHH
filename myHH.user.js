@@ -12,10 +12,11 @@
 
 var myHH= {
 	general: (a)=> {
+		let troll = ["Dark Lord", "l'Espion Ninja", "Gruntt", "Edwarda", "Donatien", "Sylvanus", "Bremen", "Finalmecia", "Fredy Sih Roko Senseï"];
 		$('div[rel^="content"] > div > a[href^="/quest"]').after($('<a/>', {
 			'id': 'myHH_boss',
-			'href': '/boss',
-			'onclick': `hh_popup.open("hh_boss_fight",{}, 'popup_queue_front');`,
+			'href': './',
+			'onclick': `hh_popup.open("hh_boss_fight",{}, 'popup_queue_front'); return false;`,
 			'html': [
 				$('<ic/>', {'class': 'continue_quest'}),
 				$('<span/>', {'text': 'Boss'})
@@ -23,13 +24,15 @@ var myHH= {
 		}));
 		$('div#popups').append($('<div/>', {
 			'id': 'hh_boss_fight',
-			'css': {'display': 'none'},
-			'html': $('<button/>', {
-				'class': 'blue_text_button',
-				'onclick': 'hh_popup.close();',
-				'text': 'Fermer'
-			})
+			'css': {'display': 'none'}
 		}));
+		for(var a=0;a<Hero.infos.questing.id_world-1;a++) {
+			$('<a/>', {
+				'href': `https://www.hentaiheroes.com/battle.html?id_troll=${a+1}`,
+				'class': 'blue_text_button',
+				'text': troll[a]
+			})
+		}
 	},
 	activities: (a)=> {
 		$('.missions_wrap > div.mission_object').sort((a,b)=> {
