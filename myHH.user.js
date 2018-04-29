@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         MyHH
-// @version      0.0.7
+// @version      0.0.8
 // @description  Ajout de fonction mineur au site Hentai Heroes <3
 // @author       Chifumy
 // @grant        unsafeWindow
@@ -24,10 +24,18 @@ var myHH= {
 		}));
 		$('div#popups').append($('<div/>', {
 			'id': 'hh_boss_fight',
-			'css': {'display': 'none'}
+			'css': {'display': 'none'},
+			'html': $('<div/>', {'css':{
+				'display': 'flex',
+				'flex-direction': 'column',
+				'flex-wrap': 'wrap',
+				'justify-content': 'center',
+				'align-content': 'center',
+				'align-items': 'center'
+			}})
 		}));
 		for(var z=0;z<Hero.infos.questing.id_world-1;z++) {
-			$('#hh_boss_fight').append($('<a/>', {
+			$('#hh_boss_fight div').append($('<a/>', {
 				'href': `https://www.hentaiheroes.com/battle.html?id_troll=${z+1}`,
 				'class': 'blue_text_button',
 				'text': troll[z]
