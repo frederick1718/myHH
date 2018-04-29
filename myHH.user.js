@@ -12,7 +12,7 @@
 
 var myHH= {
 	general: (a)=> {
-		$('div[rel^="content"] > div > a[href^="/quest"]').after($('<a/>', {
+		/*$('div[rel^="content"] > div > a[href^="/quest"]').after($('<a/>', {
 			'id': 'myHH_boss',
 			'href': '/boss',
 			'onclick': 'return false;',
@@ -20,7 +20,7 @@ var myHH= {
 				$('<ic/>', {'class': 'continue_quest'}),
 				$('<span/>', {'text': 'Boss'})
 			]
-		}));
+		}));*/
 		$('#myHH_boss').click(()=> {
 			$('body').append($('<div/>', {
 				'css': {
