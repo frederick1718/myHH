@@ -7,4 +7,4 @@
 * Affichage de l'xp et de l'affection directement dans la liste des filles. **[Harem]**
 * Et encore plein d'autres choses!
 
-[Discord](https://discord.gg/fcgPCvc)
+[[Discord](https://discord.gg/fcgPCvc)]
