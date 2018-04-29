@@ -31,14 +31,16 @@ var myHH= {
 				'flex-wrap': 'wrap',
 				'justify-content': 'center',
 				'align-content': 'center',
-				'align-items': 'center'
+				'align-items': 'center',
+				'height': '100%'
 			}})
 		}));
 		for(var z=0;z<Hero.infos.questing.id_world-1;z++) {
 			$('#hh_boss_fight div').append($('<a/>', {
 				'href': `https://www.hentaiheroes.com/battle.html?id_troll=${z+1}`,
 				'class': 'blue_text_button',
-				'text': troll[z]
+				'text': troll[z],
+				'css': {'margin': '12px 24px'}
 			}));
 		}
 	},
