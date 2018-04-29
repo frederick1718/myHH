@@ -5,4 +5,6 @@
 ## Bientôt:
 * Ajout d'une pages "Boss" dans le menu. **[General]**
 * Affichage de l'xp et de l'affection directement dans la liste des filles. **[Harem]**
-* Et encore une autre puce !
+* Et encore plein d'autres choses!
+
+[Discord](https://discord.gg/fcgPCvc)
