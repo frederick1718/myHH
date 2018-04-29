@@ -1,2 +1,2 @@
-# HaremHeroes
-v2 of Harem Heroes++
+# myHH
+Script pour hentaiheroes.com <3
