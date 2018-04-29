@@ -1,5 +1,5 @@
 # myHH
-*Script pour hentaiheroes.com <3*
+*Script pour Hentai Heroes <3*
 ## Fonctionnalités:
 * Classement des Missions de la plus rapide a la plus longue. **[Activités]**
 ## Bientôt:
@@ -7,4 +7,4 @@
 * Affichage de l'xp et de l'affection directement dans la liste des filles. **[Harem]**
 * Et encore plein d'autres choses!
 
-[[Discord](https://discord.gg/fcgPCvc)]
+[[Discord](https://discord.gg/fcgPCvc)] [[Hentai Heroes](https://www.hentaiheroes.com/)]
