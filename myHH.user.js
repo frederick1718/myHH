@@ -82,6 +82,7 @@ body > div.troll > h2 {
 	position: relative;
 }
 body > div.troll > a {
+	position: relative;
 	display: block;
 	background-image: linear-gradient(#00aaff 0px, #006688 50%, #005577 51%, #00aaff 100%);
 	border: 1px solid #006688;
