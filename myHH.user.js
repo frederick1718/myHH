@@ -17,11 +17,22 @@ var myHH= ()=> {
 		}).each((a,b)=>{
 			$('.missions_wrap').append($(b));
 		});
+	},
+	arena: ()=> {
+		$('#refresh_villains').parent().append($('<button>', {
+			'id': "all_fight",
+			'css': {left: "15%"},
+			'class': "blue_text_button refresh_button",
+			'text': 'Les combattres tous'
+		}));
+		$('#all_fight').click(()=> {
+			for(var a=0;a<3;a++)
+				window.open(`https://www.hentaiheroes.com/battle.html?id_arena=${a}`);
+		});
 	}
 };
 
 $("document").ready(()=> {
 	let pages = /^\//[Symbol.replace](window.location.pathname, "").split(/\.|\//);
 	if(MyHHf.hasOwnProperty(pages[0])) MyHHf[pages[0]]();
-	//console.log()
 });
