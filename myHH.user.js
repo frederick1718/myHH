@@ -12,23 +12,24 @@
 
 var myHH= {
 	general: (a)=> {
-		/*$('div[rel^="content"] > div > a[href^="/quest"]').after($('<a/>', {
+		$('div[rel^="content"] > div > a[href^="/quest"]').after($('<a/>', {
 			'id': 'myHH_boss',
 			'href': '/boss',
-			'onclick': 'return false;',
+			'onclick': `hh_popup.open("hh_boss_fight",{}, 'popup_queue_front');`,
 			'html': [
 				$('<ic/>', {'class': 'continue_quest'}),
 				$('<span/>', {'text': 'Boss'})
 			]
-		}));*/
-		$('#myHH_boss').click(()=> {
-			$('body').append($('<div/>', {
-				'css': {
-					height: '90%',
-					width: '95%'
-				}
-			}));
-		});
+		}));
+		$('div#popups').append($('<div/>', {
+			'id': 'hh_boss_fight',
+			'css': {'display': 'none'},
+			'html': $('<button/>', {
+				'class': 'blue_text_button',
+				'onclick': 'hh_popup.close();',
+				'text': 'Fermer'
+			})
+		}));
 	},
 	activities: (a)=> {
 		$('.missions_wrap > div.mission_object').sort((a,b)=> {
