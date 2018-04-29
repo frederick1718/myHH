@@ -1,11 +1,13 @@
 // ==UserScript==
-// @name       MyHH
-// @version    0.0.1
-// @grant      unsafeWindow
-// @grant      GM_xmlhttpRequest
-// @grant      GM.xmlHttpRequest
-// @require    https://code.jquery.com/jquery-3.3.1.min.js
-// @match      https://www.hentaiheroes.com/*
+// @name         MyHH
+// @version      0.0.7
+// @description  Ajout de fonction mineur au site Hentai Heroes <3
+// @author       Chifumy
+// @grant        unsafeWindow
+// @grant        GM_xmlhttpRequest
+// @grant        GM.xmlHttpRequest
+// @require      https://code.jquery.com/jquery-3.3.1.min.js
+// @match        https://www.hentaiheroes.com/*
 // ==/UserScript==
 
 var myHH= ()=> {
