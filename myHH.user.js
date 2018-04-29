@@ -10,7 +10,7 @@
 // @match        https://www.hentaiheroes.com/*
 // ==/UserScript==
 
-var myHH= ()=> {
+var myHH= {
 	general: ()=> {
 		$('a[href^="/quest"]').after($('<a/>', {
 			'href': '/boss',
@@ -46,5 +46,5 @@ var myHH= ()=> {
 $("document").ready(()=> {
 	let pages = /^\//[Symbol.replace](window.location.pathname, "").split(/\.|\//);
 	if(MyHHf.hasOwnProperty(pages[0])) MyHH[pages[0]]();
-	myHH['general']();
+	myHH.general();
 });
