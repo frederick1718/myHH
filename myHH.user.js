@@ -13,6 +13,7 @@
 var myHH= {
 	general: (a)=> {
 		if(a[0]=='boss') return;
+		localStorage.setItem('curWorld', Hero.infos.questing.id_world);
 		$('a[href^="/quest"]').after($('<a/>', {
 			'href': '/boss',
 			'html': [
@@ -43,7 +44,22 @@ var myHH= {
 		});
 	},
 	boss: ()=> {
+		let boss= ["Dark Lord", "l'Espion Ninja", "Gruntt", "Edwarda", "Donatien", "Sylvanus", "Bremen", "Finalmecia", "Fredy Sih Roko Senseï"];
+		let idOB= localStorage.getItem("curWorld")-1;
 		$('body').html('');
+		for(let a=0;a<idOB;a++) {
+			$('body').append($('<div/>', {
+				'class': 'troll',
+				'html': [
+					$('<h2/>', {'text': boss[a]}),
+					$('<img/>', {'src': `https://content.hentaiheroes.com/pictures/trolls/${a+1}/ava1.png`}),
+					$('<a/>', {
+						'text': 'Combat',
+						'href': `https://www.hentaiheroes.com/battle.html?id_troll=${a+1}`
+					})
+				]
+			}));
+		}
 	}
 };
 
