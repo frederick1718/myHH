@@ -8,7 +8,17 @@
 // @match      https://www.hentaiheroes.com/*
 // ==/UserScript==
 
-var myHH= ()=> {};
+var myHH= ()=> {
+	activities: ()=> {
+		$('.missions_wrap > div.mission_object').sort((a,b)=> {
+			let x = JSON.parse(a.dataset.d);
+			let y = JSON.parse(b.dataset.d);
+			return x.duration-y.duration;
+		}).each((a,b)=>{
+			$('.missions_wrap').append($(b));
+		});
+	}
+};
 
 $("document").ready(()=> {
 	let pages = /^\//[Symbol.replace](window.location.pathname, "").split(/\.|\//);
