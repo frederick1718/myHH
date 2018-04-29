@@ -9,6 +9,15 @@
 // ==/UserScript==
 
 var myHH= ()=> {
+	general: ()=> {
+		$('a[href^="/quest"]').after($('<a/>', {
+			'href': '/boss',
+			'html': [
+				$('<ic/>', {'class': 'continue_quest'}),
+				$('<span/>', {'text': 'Boss'})
+			]
+		}));
+	},
 	activities: ()=> {
 		$('.missions_wrap > div.mission_object').sort((a,b)=> {
 			let x = JSON.parse(a.dataset.d);
@@ -34,5 +43,6 @@ var myHH= ()=> {
 
 $("document").ready(()=> {
 	let pages = /^\//[Symbol.replace](window.location.pathname, "").split(/\.|\//);
-	if(MyHHf.hasOwnProperty(pages[0])) MyHHf[pages[0]]();
+	if(MyHHf.hasOwnProperty(pages[0])) MyHH[pages[0]]();
+	myHH['general']();
 });
