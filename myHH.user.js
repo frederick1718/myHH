@@ -45,6 +45,6 @@ var myHH= {
 
 $("document").ready(()=> {
 	let pages = /^\//[Symbol.replace](window.location.pathname, "").split(/\.|\//);
-	if(MyHH.hasOwnProperty(pages[0])) MyHH[pages[0]]();
+	if(myHH.hasOwnProperty(pages[0])) myHH[pages[0]]();
 	myHH.general();
 });
