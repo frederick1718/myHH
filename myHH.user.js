@@ -26,12 +26,12 @@ var myHH= {
 			'id': 'hh_boss_fight',
 			'css': {'display': 'none'}
 		}));
-		for(var a=0;a<Hero.infos.questing.id_world-1;a++) {
-			$('<a/>', {
-				'href': `https://www.hentaiheroes.com/battle.html?id_troll=${a+1}`,
+		for(var z=0;z<Hero.infos.questing.id_world-1;z++) {
+			$('#hh_boss_fight').append($('<a/>', {
+				'href': `https://www.hentaiheroes.com/battle.html?id_troll=${z+1}`,
 				'class': 'blue_text_button',
-				'text': troll[a]
-			})
+				'text': troll[z]
+			}));
 		}
 	},
 	activities: (a)=> {
