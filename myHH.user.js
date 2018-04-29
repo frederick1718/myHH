@@ -75,6 +75,12 @@ var myHH= {
 	margin: 0px;
 	padding: 0px;
 }
+body > div.troll {
+	max-height: 90%;
+}
+body > div.troll > h2 {
+	position: relative;
+}
 body > div.troll > a {
 	display: block;
 	background-image: linear-gradient(#00aaff 0px, #006688 50%, #005577 51%, #00aaff 100%);
