@@ -11,7 +11,8 @@
 // ==/UserScript==
 
 var myHH= {
-	general: ()=> {
+	general: (a)=> {
+		if(a[0]=='boss') return;
 		$('a[href^="/quest"]').after($('<a/>', {
 			'href': '/boss',
 			'html': [
@@ -20,7 +21,7 @@ var myHH= {
 			]
 		}));
 	},
-	activities: ()=> {
+	activities: (a)=> {
 		$('.missions_wrap > div.mission_object').sort((a,b)=> {
 			let x = JSON.parse(a.dataset.d);
 			let y = JSON.parse(b.dataset.d);
@@ -29,7 +30,7 @@ var myHH= {
 			$('.missions_wrap').append($(b));
 		});
 	},
-	arena: ()=> {
+	arena: (a)=> {
 		$('#refresh_villains').parent().append($('<button>', {
 			'id': "all_fight",
 			'css': {left: "15%"},
@@ -40,11 +41,14 @@ var myHH= {
 			for(var a=0;a<3;a++)
 				window.open(`https://www.hentaiheroes.com/battle.html?id_arena=${a}`);
 		});
+	},
+	boss: ()=> {
+		$('body').html('');
 	}
 };
 
 $("document").ready(()=> {
 	let pages = /^\//[Symbol.replace](window.location.pathname, "").split(/\.|\//);
-	if(myHH.hasOwnProperty(pages[0])) myHH[pages[0]]();
-	myHH.general();
+	if(myHH.hasOwnProperty(pages[0])) myHH[pages[0]](pages);
+	myHH.general(pages);
 });
