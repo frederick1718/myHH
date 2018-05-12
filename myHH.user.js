@@ -13,34 +13,14 @@
 var myHH= {
 	general: (a)=> {
 		let troll = ["Dark Lord", "l'Espion Ninja", "Gruntt", "Edwarda", "Donatien", "Sylvanus", "Bremen", "Finalmecia", "Fredy Sih Roko Senseï"];
-		$('div[rel^="content"] > div > a[href^="/quest"]').after($('<a/>', {
-			'id': 'myHH_boss',
-			'href': './',
-			'onclick': `hh_popup.open("hh_boss_fight",{}, 'popup_queue_front'); return false;`,
-			'html': [
-				$('<ic/>', {'class': 'continue_quest'}),
-				$('<span/>', {'text': 'Boss'})
-			]
+		$('body > div > header > div.energy_counter[type="energy_fight"] > .over').after($('<div/>', {
+			'class': 'fightBoss',
+			'html': $('<style/>', {'text': `.bar,body>div>header>div.energy_counter>.over{max-height:18px}body>div>header>div.energy_counter>.fightBoss{margin-top:22px;z-index:4!important;visibility:hidden;background:rgba(102,136,153,.67);border-radius:0 8px 8px 0;box-shadow:0 0 0 1px rgba(255,255,255,.73);margin-left:-18px}body>div>header>div.energy_counter>.fightBoss>a{display:block;padding-left:20px;color:#fff;text-decoration:none}body>div>header>div.energy_counter>.fightBoss>a:hover{text-decoration:underline solid #fff}body>div>header>div.energy_counter>.fightBoss:hover,body>div>header>div.energy_counter>.over:hover~div.fightBoss,body>div>header>div.energy_counter>[cur=EF]:hover~div.fightBoss{visibility:visible;position:inherit}`})
 		}));
-		$('div#popups').append($('<div/>', {
-			'id': 'hh_boss_fight',
-			'css': {'display': 'none'},
-			'html': $('<div/>', {'css':{
-				'display': 'flex',
-				'flex-direction': 'column',
-				'flex-wrap': 'wrap',
-				'justify-content': 'center',
-				'align-content': 'center',
-				'align-items': 'center',
-				'height': '100%'
-			}})
-		}));
-		for(var z=0;z<Hero.infos.questing.id_world-1;z++) {
-			$('#hh_boss_fight div').append($('<a/>', {
+		for(let z=0;z<Hero.infos.questing.id_world-1;z++) {
+			$('body > div > header > div.energy_counter > .fightBoss > style').before($('<a/>', {
 				'href': `https://www.hentaiheroes.com/battle.html?id_troll=${z+1}`,
-				'class': 'blue_text_button',
-				'text': troll[z],
-				'css': {'margin': '12px 24px'}
+				'text': troll[z]
 			}));
 		}
 	},
