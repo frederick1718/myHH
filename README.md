@@ -13,7 +13,7 @@
 * Sous Chrome/Chromium, installez l'addon [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=fr) pour Chrome.
 Installez ensuite le script en cliquant [ici](https://github.com/Chifumy/myHH/raw/master/myHH.user.js).
 
-## Installation et activation (Android):
+## Installation et activation (Android): *cette option n'est pas encore disponible*
 Le script peut être activé automatiquement pour **Dolphin Browser** sur Android; il reste parfois possible pour d'autres navigateurs (comme Chrome) de l'activer manuellement lorsque vous allez sur HentaiHeroes.
 
 **Dolphin Browser**
