@@ -27,4 +27,4 @@ Le script peut être activé automatiquement pour **Dolphin Browser** sur Androi
 * Une fois la page chargée, entrez « MyHH » dans la barre d'adresse de votre navigateur. Celui-ci devrait, pendant votre frappe, proposer quelques liens, et parmi eux le favori que vous avez ajouté; cliquez dessus.
 *Vous pouvez aussi essayer directement depuis le menu des favoris, mais cela ne marche pas toujours.*
 
-[[Discord](https://discord.gg/fcgPCvc)] [[Hentai Heroes](https://www.hentaiheroes.com/)]
+[[Discord](https://discord.gg/pWYAyWc)] [[Hentai Heroes](https://www.hentaiheroes.com/)]
