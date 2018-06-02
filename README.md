@@ -6,7 +6,7 @@
 * Ajout d'un menu "Boss" en dessous de la barre de combativité. **[General][user]**
 ## Bientôt:
 * Affichage de l'xp et de l'affection directement dans la liste des filles. **[Harem]**
-* disponibilité de voir l'histoire 
+* Disponibilité de voir l'histoire 
 * Et encore plein d'autres choses!
 
 ## Installation et activation (Burreau):
